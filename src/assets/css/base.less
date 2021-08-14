@@ -1,0 +1,57 @@
+/**
+ * 由于 ant-design 有自己的 base.less，
+ * 这里的 base.less 添加了一些而外的重置 CSS 样式和兼容性处理的样式
+ */
+
+@import './_theme.less';
+
+/* 设置 body元素 通用属性 */
+body {
+  // 兼容微软edge placeholder不显示问题
+  ::-webkit-input-placeholder {
+    opacity: 1;
+  }
+  min-width: 1346px;
+  // 确保内容不超出时，windows 无滚动条
+  overflow: auto;
+  background: @body-bg-color;
+}
+
+table tr > td {
+  word-break: break-word;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* 设置 a元素 通用属性 */
+a {
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
+.textAlignRight {
+  text-align: right;
+}
+
+.textAlignLeft {
+  text-align: left;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+// ts Tootip组件 color 选项没有白色，在这里设置为白色
+.ant-tooltip-inner {
+  background: #fff;
+}
+
+.ant-tooltip-arrow-content {
+  background: #fff;
+}
